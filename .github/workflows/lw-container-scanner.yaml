@@ -1,4 +1,4 @@
-name: Deploy to ECR
+name: Deploy LW Container Scanner
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
   scanning:
     name: Container Vuln Scanning
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Scan container image for vulnerabitilies using Lacework
         uses: lacework/lw-scanner-action@v1.4.0
